@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Public chat</title>
+
+    <style>
+      body {
+        background: #111;
+        color: #ddd;
+        padding: 0;
+        margin: 0;
+        font-family: monospace;
+      }
+      form {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      form input[type="text"] {
+        width: 100%;
+        background: #000;
+        height: 2rem;
+        outline: 0;
+        color: lime;
+        padding: .2rem .8rem;
+        border: 0;
+        border-top: 1px solid #333;
+      }
+      form button {
+        display: none;
+      }
+
+      .chat {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 2.4rem;
+        overflow: hidden;
+      }
+
+      .chat-messages {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-height: 100%;
+        overflow: auto;
+      }
+
+      .record {
+        padding: .3rem .5rem;
+      }
+
+      .record:nth-child(odd) {
+        background: #222;
+      }
+
+      .record small {
+        margin-right: 1rem;
+      }
+
+      .record strong {
+        margin-right: .2rem;
+      }
+
+      .record p {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="build.js"></script>
+  </body>
+</html>
